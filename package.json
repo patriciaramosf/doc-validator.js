@@ -1,0 +1,26 @@
+{
+  "name": "doc-validator",
+  "version": "1.0.0",
+  "description": "doc-validator is a JavaScript library to validate various types of documents such as national IDs, passports, and other official documents. You can specify the country, and the package will apply the appropriate validation rules for that region. Ideal for international applications that require reliable document validation.",
+  "keywords": [
+    "document",
+    "validation",
+    "passport",
+    "dni"
+  ],
+  "homepage": "https://github.com/patriciaramosf/doc-validator.js#readme",
+  "bugs": {
+    "url": "https://github.com/patriciaramosf/doc-validator.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patriciaramosf/doc-validator.js.git"
+  },
+  "license": "ISC",
+  "author": "Patricia Ramos",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
