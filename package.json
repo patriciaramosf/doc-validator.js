@@ -6,7 +6,9 @@
     "document",
     "validation",
     "passport",
-    "dni"
+    "dni",
+    "country",
+    "driving license"
   ],
   "homepage": "https://github.com/patriciaramosf/doc-validator.js#readme",
   "bugs": {
@@ -20,6 +22,10 @@
   "author": "Patricia Ramos",
   "type": "module",
   "main": "index.js",
+  "exports": {
+    "./spain": "./packages/doc-validator-spain/index.js",
+    "./portugal": "./packages/doc-validator-portugal/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
