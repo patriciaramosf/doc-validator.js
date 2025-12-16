@@ -1,32 +1,32 @@
-export function validateDNI(dni) {
-  if (typeof dni !== 'string') return false;
-  dni = dni.toUpperCase().trim();
+const regexDNI = /^(\d{8})([A-Z])$/;
+const regexNIE = /^([XYZ])(\d{7})([A-Z])$/;
+const lettersNIF = 'TRWAGMYFPDXBNJZSQVHLCKE';
 
-  const regex = /^(\d{8})([A-Z])$/;
-  const match = dni.match(regex);
+export function validateDNI(DNI) {
+  if (typeof DNI !== 'string') return false;
+  DNI = DNI.toUpperCase().trim();
+
+  const match = DNI.match(regexDNI);
   if (!match) return false;
 
-  const numero = parseInt(match[1], 10);
-  const letra = match[2];
+  const numb = parseInt(match[1], 10);
+  const letter = match[2];
 
-  const letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
-  return letras[numero % 23] === letra;
+  return lettersNIF[numb % 23] === letter;
 }
 
-export function validateNIE(nie) {
-  if (typeof nie !== 'string') return false;
-  nie = nie.toUpperCase().trim();
+export function validateNIE(NIE) {
+  if (typeof NIE !== 'string') return false;
+  NIE = NIE.toUpperCase().trim();
 
-  const regex = /^([XYZ])(\d{7})([A-Z])$/;
-  const match = nie.match(regex);
+  const match = NIE.match(regexNIE);
   if (!match) return false;
 
-  let letraInicial = match[1];
-  const numero = parseInt((letraInicial === 'X' ? '0' : letraInicial === 'Y' ? '1' : '2') + match[2], 10);
-  const letra = match[3];
+  let firstLetter = match[1];
+  const numero = parseInt((firstLetter === 'X' ? '0' : firstLetter === 'Y' ? '1' : '2') + match[2], 10);
+  const letter = match[3];
 
-  const letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
-  return letras[numero % 23] === letra;
+  return lettersNIF[numero % 23] === letter;
 }
 
 export function validateNIF(nif) {

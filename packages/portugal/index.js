@@ -1,8 +1,8 @@
-export function validateCC(cc) {
-  if (typeof cc !== 'string') return false;
-  cc = cc.toUpperCase().trim();
+export function validateCC(CC) {
+  if (typeof CC !== 'string') return false;
+  CC = CC.toUpperCase().trim();
 
-  const match = cc.match(/^(\d{8})([A-Z])$/);
+  const match = CC.match(/^(\d{8})([A-Z])$/);
   if (!match) return false;
 
   const numero = parseInt(match[1], 10);
@@ -12,13 +12,13 @@ export function validateCC(cc) {
   return letras[numero % 23] === letra;
 }
 
-export function validateNIF(nif) {
-  if (typeof nif !== 'string') return false;
-  nif = nif.trim();
+export function validateNIF(NIF) {
+  if (typeof NIF !== 'string') return false;
+  NIF = NIF.trim();
 
-  if (!/^\d{9}$/.test(nif)) return false;
+  if (!/^\d{9}$/.test(NIF)) return false;
 
-  const digits = nif.split('').map(Number);
+  const digits = NIF.split('').map(Number);
   const control = digits[8];
   let sum = 0;
 
