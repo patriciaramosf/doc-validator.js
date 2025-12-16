@@ -16,7 +16,7 @@ npm install doc-validator
 yarn add doc-validator
 ```
 ### 🌼  Uso
-1. Importando todo con namespaces por país
+**1. Importando todo con namespaces por país**
 
 ```
 import { spain, portugal } from 'doc-validator';
@@ -30,7 +30,7 @@ const isNIFValidPT = portugal.validateNIF('123456789');
 const isPassportValidPT = portugal.validatePassport('AB1234567');
 ```
 
-2. Importando solo un país (subpath export)
+**2. Importando solo un país (subpath export)**
 
 ```
 import { validateDNI } from 'doc-validator/spain';
