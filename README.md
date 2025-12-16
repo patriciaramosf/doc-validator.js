@@ -23,7 +23,7 @@ import { spain, portugal } from 'doc-validator';
 
 // España
 const isDNIValid = spain.validateDNI('12345678Z');
-const isNIFValid = spain.validateNIF('12345678Z');
+const isPassportValid = spain.validatePassport('12345678Z');
 
 // Portugal
 const isNIFValidPT = portugal.validateNIF('123456789');
