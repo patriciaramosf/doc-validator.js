@@ -9,8 +9,10 @@ Importar todo mediante namespaces
 
 Importar solo lo que necesitas para un bundle más pequeño
 
-`Instalación
+```
+Instalación
 
 npm install doc-validator
 # o con yarn
-yarn add doc-validator`
+yarn add doc-validator
+```
