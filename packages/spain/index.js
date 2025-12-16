@@ -12,3 +12,23 @@ export function validateDNI(dni) {
   const letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
   return letras[numero % 23] === letra;
 }
+
+export function validateNIE(nie) {
+  if (typeof nie !== 'string') return false;
+  nie = nie.toUpperCase().trim();
+
+  const regex = /^([XYZ])(\d{7})([A-Z])$/;
+  const match = nie.match(regex);
+  if (!match) return false;
+
+  let letraInicial = match[1];
+  const numero = parseInt((letraInicial === 'X' ? '0' : letraInicial === 'Y' ? '1' : '2') + match[2], 10);
+  const letra = match[3];
+
+  const letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
+  return letras[numero % 23] === letra;
+}
+
+export function validateNIF(nif) {
+  return validateDNI(nif) || validateNIE(nif);
+}
