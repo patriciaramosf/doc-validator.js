@@ -1,22 +1,22 @@
 # doc-validator.js
-## doc-validator.js es una librería modular de JavaScript para validar documentos oficiales como DNI, NIF, pasaportes y otros documentos según el país.
+## Modular JavaScript library for validating official documents such as DNI, NIF, passports, and other documents by country.
 
-### Permite:
+### Features:
 
-* Validación por país con reglas locales
+* Country-specific validation rules
 
-* Importar todo mediante namespaces
+* Import everything via namespaces
 
-* Importar solo lo que necesitas para un bundle más pequeño
+* Import only what you need for a smaller bundle
 
-### 📦 Instalación
+### 📦 Installation
 ```
 npm install doc-validator
 # o con yarn
 yarn add doc-validator
 ```
-### 🌼  Uso
-**1. Importando todo con namespaces por país**
+### 🌼  Usage
+**1. Importing everything using country namespacess**
 
 ```
 import { spain, portugal } from 'doc-validator';
@@ -30,7 +30,7 @@ const isNIFValidPT = portugal.validateNIF('123456789');
 const isPassportValidPT = portugal.validatePassport('AB1234567');
 ```
 
-**2. Importando solo un país (subpath export)**
+**2. Importing only a specific country (subpath export)**
 
 ```
 import { validateDNI } from 'doc-validator/spain';
