@@ -44,7 +44,7 @@ const isNIFValidPT = validateNIF('123456789');
 
 | Country   | Function & Description |
 |-----------|-----------------------|
-| Portugal  | - `validateCC` — Validates Portuguese Cartão de Cidadão (national ID card)  
+| Portugal  | - `validateCC` —  Validates Portuguese Cartão de Cidadão (national ID card)  
 |           | - `validateNIF` — Validates Portuguese NIF (Número de Identificação Fiscal – tax number) |
 | Spain     | - `validateDNI` — Validates Spanish DNI (Documento Nacional de Identidad)  
 |           | - `validateNIF` — Validates Spanish NIF (tax identification number)  
