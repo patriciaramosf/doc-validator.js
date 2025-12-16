@@ -23,8 +23,9 @@
   "type": "module",
   "main": "index.js",
   "exports": {
-    "./spain": "./packages/doc-validator-spain/index.js",
-    "./portugal": "./packages/doc-validator-portugal/index.js"
+    ".": "./index.js",
+    "./spain": "./packages/spain/index.js",
+    "./portugal": "./packages/portugal/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
