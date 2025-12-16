@@ -42,8 +42,6 @@ const isNIFValidPT = validateNIF('123456789');
 
 ### 📋  Available functions by country
 
-### 📋 Available functions by country
-
 | Country   | Function & Description |
 |-----------|-----------------------|
 | Spain     | - `validateDNI` — Validates Spanish DNI (Documento Nacional de Identidad)  
