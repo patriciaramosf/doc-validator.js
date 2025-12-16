@@ -41,9 +41,8 @@ const isNIFValidPT = validateNIF('123456789');
 ```
 
 ### 📋  Available functions by country
-📋 Available functions by country
 
-| Country   | Available functions                       |
+| Country   | Functions                       |
 |-----------|-------------------------------------------|
-| Spain     | `validateDNI`  `validateNIF`  `validatePassport`  ... |
-| Portugal  | `validateNIF`  `validatePassport`  ...   |
+| Spain     | `validateDNI`  `validateNIF`  `validatePassport`|
+| Portugal  | `validateNIF`  `validatePassport `|
