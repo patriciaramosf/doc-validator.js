@@ -39,3 +39,11 @@ import { validateNIF } from 'doc-validator/portugal';
 const isDNIValid = validateDNI('12345678Z');
 const isNIFValidPT = validateNIF('123456789');
 ```
+
+### 📋  Available functions by country
+📋 Available functions by country
+
+| Country   | Available functions                       |
+|-----------|-------------------------------------------|
+| Spain     | `validateDNI`  `validateNIF`  `validatePassport`  ... |
+| Portugal  | `validateNIF`  `validatePassport`  ...   |
