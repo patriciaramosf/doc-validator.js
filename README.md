@@ -10,7 +10,7 @@ Permite:
 * Importar solo lo que necesitas para un bundle más pequeño
 
 ```
-Instalación
+📦 Instalación
 
 npm install doc-validator
 # o con yarn
