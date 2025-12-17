@@ -5,9 +5,9 @@
  */
 export const validateCC = (CC) => {
   if (typeof CC !== 'string') return false;
-  CC = CC.toUpperCase().trim();
+  const formattedCC = CC.toUpperCase().trim();
 
-  const match = CC.match(/^(\d{8})([A-Z])$/);
+  const match = formattedCC.match(/^(\d{8})([A-Z])$/);
   if (!match) return false;
 
   const numero = parseInt(match[1], 10);
@@ -15,7 +15,7 @@ export const validateCC = (CC) => {
 
   const letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
   return letras[numero % 23] === letra;
-}
+};
 
 /**
  * Validates a Portuguese NIF (Número de Identificação Fiscal).
@@ -24,11 +24,11 @@ export const validateCC = (CC) => {
  */
 export const validateNIF = (NIF) => {
   if (typeof NIF !== 'string') return false;
-  NIF = NIF.trim();
+  const formattedNIF = NIF.trim();
 
-  if (!/^\d{9}$/.test(NIF)) return false;
+  if (!/^\d{9}$/.test(formattedNIF)) return false;
 
-  const digits = NIF.split('').map(Number);
+  const digits = formattedNIF.split('').map(Number);
   const control = digits[8];
   let sum = 0;
 
@@ -40,4 +40,4 @@ export const validateNIF = (NIF) => {
   const checkDigit = check >= 10 ? 0 : check;
 
   return control === checkDigit;
-}
+};
