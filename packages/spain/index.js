@@ -23,10 +23,10 @@ export function validateNIE(NIE) {
   if (!match) return false;
 
   let firstLetter = match[1];
-  const numero = parseInt((firstLetter === 'X' ? '0' : firstLetter === 'Y' ? '1' : '2') + match[2], 10);
+  const numb = parseInt((firstLetter === 'X' ? '0' : firstLetter === 'Y' ? '1' : '2') + match[2], 10);
   const letter = match[3];
 
-  return lettersNIF[numero % 23] === letter;
+  return lettersNIF[numb % 23] === letter;
 }
 
 export function validateNIF(nif) {
