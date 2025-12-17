@@ -1,7 +1,7 @@
 # doc-validator.js
 ## Modular JavaScript library for validating official documents such as DNI, NIF, passports, and other documents by country.
 
-### Features:
+### 🛠️ Features:
 
 * Country-specific validation rules
 
