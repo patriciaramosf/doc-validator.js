@@ -2,7 +2,12 @@ const regexDNI = /^(\d{8})([A-Z])$/;
 const regexNIE = /^([XYZ])(\d{7})([A-Z])$/;
 const lettersNIF = 'TRWAGMYFPDXBNJZSQVHLCKE';
 
-export function validateDNI(DNI) {
+/**
+ * Validates a Spanish DNI (Documento Nacional de Identidad).
+ * @param {string} DNI - 8 digits + letter.
+ * @returns {boolean} True if the DNI is valid, false otherwise.
+ */
+export const validateDNI = (DNI)  => {
   if (typeof DNI !== 'string') return false;
   DNI = DNI.toUpperCase().trim();
 
@@ -15,7 +20,12 @@ export function validateDNI(DNI) {
   return lettersNIF[numb % 23] === letter;
 }
 
-export function validateNIE(NIE) {
+/**
+ * Validates a Spanish NIE (Número de Identidad de Extranjero).
+ * @param {string} NIE - Format X/Y/Z + 7 digits + letter.
+ * @returns {boolean} True if the NIE is valid, false otherwise.
+ */
+export const validateNIE = (NIE) => {
   if (typeof NIE !== 'string') return false;
   NIE = NIE.toUpperCase().trim();
 
@@ -29,6 +39,11 @@ export function validateNIE(NIE) {
   return lettersNIF[numb % 23] === letter;
 }
 
+/**
+ * Validates a Spanish NIF (Número de Identificación Fiscal).
+ * @param {string} nif - Either a DNI or NIE.
+ * @returns {boolean} True if the NIF is valid, false otherwise.
+ */
 export function validateNIF(nif) {
   return validateDNI(nif) || validateNIE(nif);
 }

@@ -1,4 +1,9 @@
-export function validateCC(CC) {
+/**
+ * Validates a Portuguese Cartão de Cidadão (CC).
+ * @param {string} CC - The national ID string (8 digits + letter).
+ * @returns {boolean} True if the CC is valid, false otherwise.
+ */
+export const validateCC = (CC) => {
   if (typeof CC !== 'string') return false;
   CC = CC.toUpperCase().trim();
 
@@ -12,7 +17,12 @@ export function validateCC(CC) {
   return letras[numero % 23] === letra;
 }
 
-export function validateNIF(NIF) {
+/**
+ * Validates a Portuguese NIF (Número de Identificação Fiscal).
+ * @param {string} NIF - The tax number string (9 digits).
+ * @returns {boolean} True if the NIF is valid, false otherwise.
+ */
+export const validateNIF = (NIF) => {
   if (typeof NIF !== 'string') return false;
   NIF = NIF.trim();
 
