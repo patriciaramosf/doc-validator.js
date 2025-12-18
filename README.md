@@ -39,7 +39,7 @@ import { validateNIF } from 'doc-validator/portugal';
 const isDNIValid = validateDNI('12345678Z');
 const isNIFValidPT = validateNIF('123456789');
 ```
-### 📋 Supported countries
+### 🌎 Supported countries
 * 🇵🇹 Portugal (NIF, Cartão de Cidadão)
 * 🇪🇸 Spain (DNI, NIE, NIF)
 
