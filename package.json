@@ -44,5 +44,9 @@
   },
   "dependencies": {
     "husky": "^9.1.7"
-  }
+  },
+  "files": [
+  "index.js",
+  "packages"
+ ]
 }
