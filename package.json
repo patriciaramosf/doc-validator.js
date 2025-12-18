@@ -30,8 +30,8 @@
   "scripts": {
     "test": "jest",
     "prepare": "husky",
-    "lint": "eslint . --ext .js",
-    "lint:fix": "eslint . --ext .js --fix"
+    "lint": "eslint . --ext .js --max-warnings=0",
+    "lint:fix": "eslint . --ext .js --fix --max-warnings=0 --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.28.5",
