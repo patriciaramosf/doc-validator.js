@@ -1,6 +1,4 @@
 node_modules
 .husky
 .eslint*
-*.test.js
 coverage
-.git
