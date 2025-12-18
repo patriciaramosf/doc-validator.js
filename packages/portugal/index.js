@@ -40,4 +40,5 @@ export const validateNIF = (NIF) => {
   const checkDigit = check >= 10 ? 0 : check;
 
   return control === checkDigit;
+   
 };
